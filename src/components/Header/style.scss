@@ -1,0 +1,37 @@
+@use '@/scss/var' as *;
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    background-color: $light-mode-elements;
+    box-shadow: 0 2px 8px 0 rgba(99, 99, 99, .2);
+    z-index: 9999999;
+
+    &__logo {
+        h1 {
+            font-size: 16px;
+            font-weight: 800;
+        }
+    }
+
+    &__toggle_btn {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        text-transform: capitalize;
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+html.dark {
+    .header {
+        background-color: $dark-mode-elements;
+        color: $dark-mode-text;
+    }
+}
